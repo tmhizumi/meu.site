@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
+    <title>Portfólio pessoal - Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-logo">
+            <p>Thiago Izumi</p>
+            <p>RU: 4623150</p>
+        </div>
+        <div class="header-options">
+            <a href="./index.html">Sobre mim</a>
+            <a href="./formacao.html">Formação</a>
+            <a href="#" class="selected">Portfólio</a>
+            <a href="./contato.html">Contato</a>
+        </div>
+    </header>
+    <div id="page-title">
+        <span>Portfólio</span>
+    </div>
+    <div class="container">
+        <div id="portfolio">
+            <!-- <div class="card">
+                <img src="./assets/portfolio/prototipo-amazon.jpg" alt="prototipo amazon">
+                <div>
+                    <span class="title">Protótipo - Amazon</span>
+                    <a href="#">Acesse aqui</a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <footer>
+        <p>Fundamentos da Programação Web</p>
+        </footer>
+</body>
+
+<script>
+    function showPortfolio(items) {
+        let container = document.getElementById('portfolio'); // loop no json e cria os cards para cada projeto
+        items.forEach(item => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            
+            const thumb = document.createElement('img');
+            thumb.src = item.thumb;
+            thumb.alt = 'Imagem do projeto';
+            
+            const title = document.createElement('span');
+            title.classList.add('title');
+            title.innerHTML = item.name;
+            
+            const description = document.createElement('span');
+            description.classList.add('description');
+            description.innerHTML = item.description;
+            
+            const link = document.createElement('a');
+            link.innerHTML = 'Acesse aqui';
+            link.href = item.link ?? '#';
+            
+            const div = document.createElement('div');
+            div.appendChild(title);
+            div.appendChild(description);
+            div.appendChild(link);
+            card.appendChild(thumb);
+            card.appendChild(div);
+            
+            container.appendChild(card);
+        });
+    }
+
+    fetch('./portfolio.json')
+        .then((response) => response.json())
+        .then((data) => showPortfolio(data))
+</script>
+
+</html>

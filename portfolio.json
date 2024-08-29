@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Protótipo - Amazon",
+        "thumb": "./assets/portfolio/prototipo-amazon.jpg",
+        "description": "Prototipagem do aplicativo Amazon realizado no Figma para realizar o trabalho de Design de Interação",
+        "link": "https://www.figma.com/proto/UNjJyvnKku9IZ7TNDlOqFb/Untitled?t=uLZkQjMh92NoWLlK-1&scaling=scale-down&page-id=0%3A1&node-id=2-2&starting-point-node-id=2%3A2"
+    },
+    {
+        "name": "Loja de Games",
+        "thumb": "./assets/portfolio/loja-games.jpg",
+        "description": "Desenvovimento de site completo em PHP e MYSQL para gerenciar, comprar e vender jogos digitais",
+        "link": "https://github.com/caiof-lima/loja-games-php"
+    },
+    {
+        "name": "Landing page de Vendas",
+        "thumb": "./assets/portfolio/site-vendas.jpg",
+        "description": "Implementação do front-end de uma tela de pagamentos contendo cards como desafio do site Frontend Mentor",
+        "link": "https://github.com/caiof-lima/frontend-mentor-2"
+    }
+]

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/contato.css">
+    <title>Portfólio pessoal - Contato</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-logo">
+            <p>Thiago Izumi</p>
+            <p>RU: 4623150</p>
+        </div>
+        <div class="header-options">
+            <a href="./index.html">Sobre mim</a>
+            <a href="./formacao.html">Formação</a>
+            <a href="./portfolio.html">Portfólio</a>
+            <a href="#" class="selected">Contato</a>
+        </div>
+    </header>
+    <div id="page-title">
+        <span>Contato</span>
+    </div>
+    <div class="container">
+        <div id="contact">
+            <form id="form-contact" action="#" method="post">
+                <div>
+                    <input placeholder="Insira seu nome" type="text" required name="name" id="input-name">
+                    <input placeholder="Insira seu e-mail" type="email" required name="email" id="input-email">
+                </div>
+                <textarea placeholder="Insira sua mensagem" name="message" id="input-message" required rows="10"></textarea>
+                <button type="submit">Enviar mensagem</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>Fundamentos da Programação Web</p>
+        </footer>
+</body>
+
+<script>
+    function submit() {
+        alert('Mensagem enviada com sucesso!');
+    }
+
+    document.getElementById('form-contact').addEventListener('submit', function (ev) {
+        event.preventDefault();
+        submit()
+    })
+</script>
+
+</html>
